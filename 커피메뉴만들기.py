@@ -103,4 +103,8 @@ while True:
     else:
         print("잘못된 메뉴 선택입니다.")
 # 파이썬에서는 튜플(Tuple)은 변경할 수 없는(immutable)시퀀스 자료형입니다. 튜플은 여러개의 요소를 저장하고,
+name, age, city = person
+print(name)  # 'Alice'
+print(age)   # 30
+print(city)  # 'New York'
 # 각 요소에는 인덱스를 통해 접근 할 수 있습니다. 튜플은 괄호(())를 사용하여 정의하며ㅡ 각 요소는 쉼표, 로 구분됩니다.
