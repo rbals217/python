@@ -1,5 +1,6 @@
 # 파이썬에서는 튜플(Tuple)은 변경할 수 없는(immutable)시퀀스 자료형입니다. 튜플은 여러개의 요소를 저장하고,
 # 각 요소에는 인덱스를 통해 접근 할 수 있습니다. 튜플은 괄호(())를 사용하여 정의하며ㅡ 각 요소는 쉼표, 로 구분됩니다.
+from multiprocessing.connection import rebuild_pipe_connection
 
 ls = [1,2,3]
 tp1 = (1,2,3)
@@ -14,8 +15,12 @@ print(type(ts))
 print(type(ts2))
 print(type(ts3))
 
-member ="안유진", 23 ,"대전시", True  #패킹
+member =["안유진", 23 ,"대전시", True]  #패킹
 name, age, addr, is_adress = member #언패킹
+
+member.append("1004")
+print(member)
+
 
 def get_name_card(name, phone):
     position = f"{name} 연구원"
@@ -25,3 +30,33 @@ def get_name_card(name, phone):
 
 result = get_name_card("곰돌이","1234-5678")
 print(f"{result}")
+
+
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+
+# 중복 제거
+s3 = {1, 2, 3 , 4, 5, 6, 2, 3, 4, 5}
+print(s3)
+
+# 교집합
+print(s1.intersection(s2))
+(s1 & s2)
+
+# 합집합
+print(s1.union(s2))
+print(s1 | s2)
+
+# 차집합
+print(s1.difference(s2))
+print(s1 - s2)
+
+import random
+
+numbers = set()
+while True:
+    number = random.randint(1, 41)
+    numbers.add(number)
+    if len(numbers) == 6: break
+
+print(numbers)
