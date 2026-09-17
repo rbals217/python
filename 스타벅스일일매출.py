@@ -37,7 +37,7 @@ with  open(file_name, "r", encoding="utf-8") as file:
     cafe_latte.append(int(data_list[3]))
     cappuccino.append(int(data_list[4]))
 
-def total__sales_fucn():
+def total_sales_fucn():
     print("\n 전체 판매량")
     print(f"{header[1]:<12}: {sum (espresso)}")
     print(f"{header[2]:<12} {sum (americano)}")
@@ -89,18 +89,18 @@ while True:
     print("[0] 종료 ")
     choice = int(input("메뉴를 선택하세요: "))
 
-    if choice ==1:
-        total__sales_fucn()
-    elif choice ==2:
+    if choice == 1:
+        total_sales_fucn()
+    elif choice == 2:
         avg_sales_fucn()
-    elif choice ==3:
+    elif choice == 3:
         most_sold_menu_func()
-    elif choice ==4:
+    elif choice == 4:
         less_sales_menu_func()
-    elif choice ==5:
+    elif choice == 5:
         most_sday_func()
-    elif choice ==0:
-        print("프로그램을 종료합니다")
-    break
-else:
-    print("다시 하세요")
+    elif choice == 0:
+        print("프로그램을 종료합니다.")
+        break
+    else:
+        print("유효한 번호를 입력하세요.")
